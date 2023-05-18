@@ -8,8 +8,7 @@ I will take the first section of readme to explain my approach to the task.
 I decided to create a set of minimal routes that gives the api user a better 
 way to find correlated information about data. So the routes are:
 
-`
-Route::get('/invoice/list', [InvoiceController::class, 'list']);
+```Route::get('/invoice/list', [InvoiceController::class, 'list']);
 Route::get('/invoice/list/{status}', [InvoiceController::class, 'listByStatus']);
 Route::get('/invoice/{id}', [InvoiceController::class, 'getInvoice']);
 Route::get('/invoice/approve/{id}', [InvoiceController::class, 'approve']);
@@ -21,8 +20,7 @@ Route::get('/company/{id}', [CompanyController::class, 'getCompany']);
 
 Route::get('/product/list', [ProductController::class, 'list']);
 Route::get('/product/list/{name}', [ProductController::class, 'listByName']);
-Route::get('/product/{id}', [ProductController::class, 'getProduct']);
-`
+Route::get('/product/{id}', [ProductController::class, 'getProduct']);```
 
 Note: Above routes are not protected by authentication. I would add a middleware to protect them. 
 However it was not a explicit requirement in the task. On a real world scenario I would add a 
@@ -37,15 +35,14 @@ I was unable to find a complete Invoice Validation logic on the project sources.
 was a kind of mocking regarding this. Maybe I miss something but I implemented the simple logic 
 for Invoice Approval / Rejection.
 
-Route::get('/invoice/approve/{id}', [InvoiceController::class, 'approve']);
-Route::get('/invoice/reject/{id}', [InvoiceController::class, 'reject']);
+```Route::get('/invoice/approve/{id}', [InvoiceController::class, 'approve']);
+Route::get('/invoice/reject/{id}', [InvoiceController::class, 'reject']);```
 
 **3) Unit Tests.**
 
 For APIs a better alternative is Integration Tests since they test the whole functioning of the API public access and give the expected user results. I'm not saying Unit Tests are not important however given the shorten time I have to complete the tasks I decided for them. I implemented just a couple of basic tests but I think they are enough to show my skills. I would like to add more tests to the project but I think it is not the main focus of the task.
 
-`
-$ php artisan test --env=testing
+```$ php artisan test --env=testing
 
    PASS  Tests\Feature\CompanyTest
   ✓ list
@@ -67,8 +64,7 @@ $ php artisan test --env=testing
   ✓ get product
 
   Tests:  13 passed
-  Time:   0.28s
-`
+  Time:   0.28s```
 
 Well, I think that's it. I hope you enjoy my work. I'm looking forward to hear from you.
 
