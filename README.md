@@ -34,7 +34,7 @@ a token to the user. the proper approuch should be discussed with the team.
 **2) Invoice Approval / Rejection**
 
 I was unable to find a complete Invoice Validation logic on the project sources. What I found 
-was a kind of mocking regarding this. Maybe I miss something but I implemented the simple logic 
+was a kind of mocking regarding this. Maybe I did miss something but I implemented the simple logic 
 for Invoice Approval / Rejection.
 
 ```
