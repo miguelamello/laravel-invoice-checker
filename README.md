@@ -3,7 +3,7 @@
 I will take the first section of readme to explain my approach to the task.
 
 
-####1) Required endpoints (routes).
+**1) Required endpoints (routes).**
 
 I decided to create a set of minimal routes that gives the api user a better 
 way to find correlated information about data. So the routes are:
@@ -29,7 +29,7 @@ would be to use a JWT token system or a OAuth2 system for a loose authentication
 authentication with a more human approuch may be I would prefer an Multi Step process like emailing 
 a token to the user. the proper approuch should be discussed with the team. 
 
-####2) Invoice Approval / Rejection
+**2) Invoice Approval / Rejection**
 
 I was unable to find a complete Invoice Validation logic on the project sources. What I found 
 was a kind of mocking regarding this. Maybe I miss something but I implemented the simple logic 
@@ -38,7 +38,7 @@ for Invoice Approval / Rejection.
 Route::get('/invoice/approve/{id}', [InvoiceController::class, 'approve']);
 Route::get('/invoice/reject/{id}', [InvoiceController::class, 'reject']);
 
-####3) Unit Tests.
+**3) Unit Tests.**
 
 For APIs a better alternative is Integration Tests since they test the whole functioning of the API public access and give the expected user results. I'm not saying Unit Tests are not important however given the shorten time I have to complete the tasks I decided for them. I implemented just a couple of basic tests but I think they are enough to show my skills. I would like to add more tests to the project but I think it is not the main focus of the task.
 
